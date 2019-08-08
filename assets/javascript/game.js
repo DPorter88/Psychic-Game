@@ -3,8 +3,8 @@ $(document).ready(function() {
     var losses = 0;
     var remain = 10;
     var choices = [
-    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
-    "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"
+    ,];
     var compChoice = choices[Math.floor(Math.random() * choices.length)]
     var answer = compChoice;
     var wShow = document.getElementById("w");
@@ -64,6 +64,5 @@ $(document).ready(function() {
     }
     
     else {
-        alert("Invalid Input!");
-    };
+    
     
