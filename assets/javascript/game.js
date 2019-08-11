@@ -19,13 +19,12 @@ $(document).ready(function() {
     
     var userGuess = _event.key;
     
-    if (userGuess == "a" || userGuess == "b" || userGuess == "c" || userGuess == "d" || userGuess == "e" || userGuess == "f" || userGuess == "g" || userGuess == "h" || userGuess == "i" || userGuess == "j" ||
-        userGuess == "k" || userGuess == "l" || userGuess == "m" || userGuess == "n" || userGuess == "o" || userGuess == "p" || userGuess == "q" || userGuess == "r" || userGuess == "s" || userGuess == "t" ||
-        userGuess == "u" || userGuess == "v" || userGuess == "w" || userGuess == "x" || userGuess == "y" || userGuess == "z") {
+    if (userGuess == "1" || userGuess == "2" || userGuess == "3" || userGuess == "4" || userGuess == "5" || userGuess == "6" || userGuess == "7" || userGuess == "8" || userGuess == "9" || userGuess == "10" ||
+        userGuess == "11" || userGuess == "l2" || userGuess == "13" || {
             console.log("g: " + userGuess)
         if (userGuess == compChoice) {
     
-            alert("Correct! The letter was " + answer + " !");
+            alert("Correct! The number was " + answer + " !");
             wins++;
             wShow.textContent = wins;
             console.log("w " + wins);
