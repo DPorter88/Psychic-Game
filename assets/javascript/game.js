@@ -1,67 +1,40 @@
-$(document).ready(function() {
-    var wins = 0;
-    var losses = 0;
-    var remain = 10;
-    var choices = [
-    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"
-    ,];
-    var compChoice = choices[Math.floor(Math.random() * choices.length)]
-    var answer = compChoice;
-    var wShow = document.getElementById("w");
-    var lShow = document.getElementById("l");
-    var rShow = document.getElementById("r");
-    var gShow = document.getElementById("iGuess");
-    
-    console.log("C: " + compChoice);
-    
-    document.onkeyup = function (_event) {
-    
-    
-    var userGuess = _event.key;
-    
-    if (userGuess == "1" || userGuess == "2" || userGuess == "3" || userGuess == "4" || userGuess == "5" || userGuess == "6" || userGuess == "7" || userGuess == "8" || userGuess == "9" || userGuess == "10" ||
-        userGuess == "11" || userGuess == "l2" || userGuess == "13" || {
-            console.log("g: " + userGuess)
-        if (userGuess == compChoice) {
-    
-            alert("Correct! The number was " + answer + " !");
-            wins++;
-            wShow.textContent = wins;
-            console.log("w " + wins);
-            // reset
-            compChoice = choices[Math.floor(Math.random() * choices.length)];
-            remain = 10;
-            rShow.textContent = remain;
-            $("#iGuess").empty();
-            console.log("C: " + compChoice);
+
+var incorrectChoices = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"];
+var correctLetters = ["5", "7", "9", "11", "15"];
+var userText = document.getElementById("user-text");
+console.log(userText)
+var winText = document.getElementById("win-count");
+var lossText = document.getElementById("loss-count");
+var guessesLeft = document.getElementById("guesses-left");
+var guessesSoFar = document.getElementById("yourGuessSofar");
+var guesses = 9;
+var guessCount = 0;
+document.onkeyup = function(event) {
+        userText.textContent = event.key;
+// index of
+        console.log(incorrectChoices.indexOf(event.key)>=0)
+        console.log(event.key)
+        if(incorrectChoices.indexOf(event.key)>=0){
+            lossText.textContent++;
+            alert("You guessed the incorrect letter. You lost, try again. ");
+        
         }
+        else{
+            winText.textContent++;
+            console.log("b");
+        }    
+  }
+
+
+  //create a guess count
+
+  // create how many guesses left
+
+/* Clear/Reset the text field */    
+function ClearFields() {
     
-        else {
-            // display guess
-            remain--;
-            rShow.textContent = remain;
-            $("#iGuess").append(userGuess + ", ");
-            console.log("r " + remain);
-    
-            if (remain === 0) {
-    
-                rShow.textContent = remain;
-                losses++;
-                lShow.textContent = losses;
-                alert("So close! The letter was " + answer + " !");
-                console.log("l " + losses);
-                // reset
-                compChoice = choices[Math.floor(Math.random() * choices.length)];
-                remain = 10;
-                rShow.textContent = remain;
-                $("#iGuess").empty();
-    
-                console.log("C: " + compChoice);
-            };
-        };
-    
-    }
-    
-    else {
-    
-    
+         document.getElementById('guesses-left').value = "";
+}
+
+       
+        

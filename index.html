@@ -4,44 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Guess The Number</title>
+    <title>The Psychic Game</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/reset" href="assets/css/reset.css">
+
 </head>
+    
 <body>
-    <div id="Game">
-        <h1>Psychic Game</h1>
-        <p>Guess What Number I'm Thinking Of</p>
 
-        <p id="your guess"></p>
-        <p id="my number">
-        <p id="wins-text"></p>
-        <p id="losses-text"></p> 
-
-        
-    
-
+    <div class="logo">
     </div>
-  <script type="text/javascript">
-  
-  
-  var computerchoices = ["1", "2" , "3" , "4" , "5" ,"6" 
-  , "7" , "8" , "9" , "10" ,"11" , "12" , "13"];
-
-
-  var wins = 0;
-  var losses = 0;
-  var ties = 0;
-
-  var directionsText = document.getElementById("directions-text");
-  var userChoiceText = document.getElementById("userchoice-text");
-  var winsText = document.getElementById("wins-text");
-    var lossesText = document.getElementById("losses-text");
     
+    <div class="game">
+              <h1>The Psychic Game</h1>  
+              <h2>Guess what number I'm thinking of <span id="user-text"><strong>__</strong></span></h2>
+              <h2>Wins <span id="win-count"><strong>0</strong></span></h2>
+              <h2>Losses <span id="loss-count"><strong>0</strong></span></h2>
+              <h2>Guesses Left: <span id="guesses-left"><strong>0</strong></span></h2>
+              <h2>Your Guess so far: <span id="yourGuessSoFar"><strong>0</strong></span></h2>
+    </div>
 
-    document.onkeyup = function(event) {
-
-
-  </script> 
-
-  
-</body>
+    </body>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </html>
